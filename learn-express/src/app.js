@@ -1,10 +1,9 @@
 const express= require('express');
 const app=express();
 const mongoose = require('mongoose');
-console.log(process.env.MONGO_DB);
-mongoose.connect(process.env.MONGO_DB);
+const uri='mongodb+srv://ysyss:ysyss@cluster0.r3buu.mongodb.net/test?retryWrites=true&w=majority';
 var db = mongoose.connection;
-
+mongoose.connect(uri);
 db.once('open',() => {
     console.log('db connected');
 });
