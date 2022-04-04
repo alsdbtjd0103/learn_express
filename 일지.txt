@@ -47,8 +47,22 @@ db에서 검색 조건에 맞는 모델을 찾고 콜백함수 호출
 
 Contact.create(req.body,(err,contact) =>{})
 db에 데이터 생성 .create(생성할 데이터,콜백함수)
+
+Contact.findOne()
+model에서 조건과 일치하는 하나만 찾아서 반환
+
+Contact.findOneAndUpdate(조건,object(수정할내용),callback)
+model에서 데이터를 하나 찾아서 수정
+단, 이때 callback함수로 넘어가는 값은 수정되기 전의 값
+
+Contact.deleteOne()
+model에서 데이터를 하나 삭제
+
 ---------------------------------------------
 <nav>
 </nav>
 메뉴,목차, 색인 등을 만들 때 사용
+----------------------------------------------
+npm install --save method-ovverride
+put과 delete는 html에서 지원하지 않아서 methodoverride를 통해 우회해서 사용해야함
 
